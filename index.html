@@ -1,0 +1,769 @@
+<html lang="en">
+  <head>
+    <title>Shruti's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+
+<style>
+/* Basic Reset and Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation */
+.navbar {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffbd39 !important;
+}
+
+/* Hero Section */
+.hero {
+background-image: url('./background.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: rgb(83, 7, 7);
+  position: relative;
+  overflow: hidden;
+  .hero {
+  color: #000; /* Black text instead of white */
+}
+}
+
+ <!-- .hero::before { -->
+  <!-- content: ''; -->
+  <!-- position: absolute; -->
+  <!-- top: 0; -->
+  <!-- left: 0; -->
+  <!-- right: 0; -->
+  <!-- bottom: 0; -->
+  <!-- background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */ -->
+<!-- }   -->
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Typing Animation */
+#typing-animation {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffbd39;
+  min-height: 2.5rem;
+  display: inline-block;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+.about-section {
+  background: #f8f9fa;
+}
+
+.about-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-info li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.about-info li:last-child {
+  border-bottom: none;
+}
+
+.about-info li span:first-child {
+  font-weight: 600;
+  min-width: 120px;
+  color: #667eea;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skill-category h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  padding: 5px 0;
+  color: #666;
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-content {
+  padding: 2rem;
+}
+
+.project-content h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.project-content p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background: #667eea;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Certifications Section */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cert-card h4 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+  color: #666;
+  margin: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  background: #f8f9fa;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.contact-item h4 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-item a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #5a67d8;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #667eea;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.social-links {
+  margin: 1rem 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title h1 {
+    font-size: 2rem;
+  }
+  
+  .projects-grid,
+  .skills-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+</style>
+
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Shruti </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="hero-content">
+              <h1 class="fade-in-up">Hola, Shruti this side!</h1>
+              <div id="typing-animation"></div>
+              <h2 class="fade-in-up">Analyst & Visualization Specialist</h2>
+              <p class="lead fade-in-up">Passionate about turning raw data into meaningful insights through Python, SQL, and advanced visualization tools.</p>
+              <a href="#projects" class="btn btn-primary btn-lg fade-in-up">View My Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-title">
+          <h1>About Me</h1>
+          <p>Get to know more about my background and expertise</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="about-info">
+              <p class="lead">Hello! I'm a tech grad, a data enthusiast who loves turning raw numbers into meaningful insights. With expertise in Python, SQL, and Viz tools, I specialize in uncovering trends, optimizing processes, and making data-driven decisions that create real impact.</p>
+              <p>Whether it's storytelling through visualization or building predictive models, I believe data has the power to shape the future—and I'm here to make it happen!</p>
+              
+              <ul class="mt-4">
+                <li><span>Education:</span> <span>B.E. in Computer Science & Engineering (2021-2025)</span></li>
+                <!-- <li><span>Institution:</span> <span>College of Engineering and Technology, Akola</span></li> -->
+                <!-- <li><span>CGPA:</span> <span>6.74/10</span></li> -->
+                <li><span>Location:</span> <span>Maharashtra, India</span></li>
+                <li><span>Email:</span> <span>shhruu89@gmail.com</span></li>
+                <!-- <li><span>Phone:</span> <span>+91 7219609470</span></li> -->
+                <li><span>Languages:</span> <span>English, Hindi</span></li>
+                <li><span>Interests:</span> <span>Data Analysis, AI/ML, Visualization</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Skills & Technologies</h1>
+          <p>My technical expertise and tools I work with</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Programming Languages</h3>
+            <ul>
+              <li>Python (Pandas, NumPy, SciPy)</li>
+              <li>SQL (MySQL, PostgreSQL)</li>
+              <li>R (Basic)</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-chart-bar"></i> Data Visualization</h3>
+            <ul>
+              <li>Matplotlib & Seaborn</li>
+              <li>Tableau</li>
+              <li>Power BI</li>
+              <li>Plotly</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Database & Tools</h3>
+            <ul>
+              <li>MySQL, PostgreSQL</li>
+              <li>SQL Server</li>
+              <li>Excel (Advanced)</li>
+              <li>Power Query & Power Pivot</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
+            <ul>
+              <li>Hugging Face Transformers</li>
+              <li>LLaMA2 & Falcon Models</li>
+              <li>Streamlit</li>
+              <li>Natural Language Processing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Featured Projects</h1>
+          <p>Explore my projects</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-content">
+              <h3>🧠 AI-Powered Mental Health Chatbot</h3>
+              <p>Built an AI-powered chatbot designed to support mental wellness by answering user queries in a supportive and empathetic way using pretrained language models.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Hugging Face</span>
+                <span class="tech-tag">LLaMA2</span>
+                <span class="tech-tag">NLP</span>
+              </div>
+              <p><strong>Key Features:</strong> Clean UI, privacy-focused, ethical AI deployment, cloud-compatible</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3><a href="https://github.com/shhruthii/Portfolio-Projects-NL/blob/main/Excel%20Bike%20Sales%20Project%20Dashboard.xlsx"></a> 📊Excel Bike Sales Dashboard</h3>
+              <p>Designed a dynamic Excel dashboard to analyze customer purchase behavior and regional bike sales performance using real-world sample data.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Excel</span>
+                <span class="tech-tag">Power Query</span>
+                <span class="tech-tag">Power Pivot</span>
+                <span class="tech-tag">Data Modeling</span>
+              </div>
+              <p><strong>Impact:</strong> Interactive report showcasing how Excel BI tools can support data-driven marketing and inventory decisions</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3><a href ="https://github.com/shhruthii/Portfolio-Projects-NL/blob/main/Analyzing%20the%20Factors%20Contributing%20to%20the%20Success%20of%20a%20Movie.ipynb" target="_self"> 🎬 Movie Success Analysis</a></h3>
+              <p>Explored key factors influencing movie profitability—such as budget, genre, runtime, and release season—using real-world data and statistical analysis.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">Seaborn</span>
+                <span class="tech-tag">Jupyter</span>
+              </div>
+              <p><strong>Deliverable:</strong> Interactive Jupyter Notebook with insights for production and marketing teams</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3> <a href="https://github.com/shhruthii/Data-Visualisations" target="_self">📈 Data Visualization Projects</a></h3> 
+              <p>Created interactive Excel dashboards tracking KPIs for fictional companies, simulating real-world reporting scenarios with automated data processing.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Excel</span>
+                <span class="tech-tag">Power Query</span>
+                <span class="tech-tag">PivotTables</span>
+                <span class="tech-tag">Data Visualization</span>
+              </div>
+              <p><strong>Efficiency:</strong> Reduced manual effort from 2 hours to 30 minutes per week through automation</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3> <a href="https://github.com/shhruthii/EDA-with-Pandas/blob/main/Exploratory%20Data%20Analysis%20in%20Pandas%20.ipynb" target="_self">🔍 Exploratory Data Analysis</a></h3>
+              <p>Performed detailed EDA on multiple real-world datasets using Pandas and NumPy for data cleaning, transformation, and statistical analysis.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Seaborn</span>
+                <span class="tech-tag">Plotly</span>
+              </div>
+              <p><strong>Outcomes:</strong> Data-backed strategies for inventory adjustments and targeted marketing campaigns</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section about-section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Work Experience</h1>
+          <p>Professional experience and achievements</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="about-info">
+              <h4><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/MyXvBcppsW2FkNYCX_Tata%20Group_gyNshKsrkbPkt49yp_1718955217906_completion_certificate.pdf" target="_self"> 🏢 TATA DATA VISUALIZATION - Virtual Internship</a></h4>
+              <ul class="mt-3">
+                <li><span>Role:</span> <span>Data Visualization Intern</span></li>
+                <li><span>Duration:</span> <span>Virtual Internship Program</span></li>
+                <li><span>Achievements:</span> <span>Simulated data visualization projects for TCS</span></li>
+                <li><span>Skills Gained:</span> <span>Client-focused reporting, decision-making visualizations</span></li>
+              </ul>
+              <p class="mt-3"><strong>Key Responsibilities:</strong></p>
+              <ul>
+                <li>• Simulated data visualization projects for Tata Consultancy Services</li>
+                <li>• Prepared insightful visuals to support decision-making for senior leadership</li>
+                <li>• Improved presentation skills through client-focused reporting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Certifications & Awards</h1>
+          <p>Professional certifications and academic achievements</p>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <h4><a href="https://www.coursera.org/account/accomplishments/specialization/PSV3BGT2ZCK4" target="_self">📊 Introduction to Data Analysis</h4></a>
+            <p>IBM</p>
+            <p class="text-muted">Data analysis fundamentals and techniques</p>
+          </div>
+          <div class="cert-card">
+            <h4><a href="https://www.coursera.org/account/accomplishments/verify/3D39LXQXT7FT" target="_self">🐍 Crash Course on Python</h4></a>
+            <p>Google</p>
+            <p class="text-muted">Python programming for data analysis</p>
+          </div>
+          <div class="cert-card">
+            <h4><a href="https://www.coursera.org/account/accomplishments/verify/8QPQBNZ7RADP" target="_self">🗄️ Databases and SQL for Data Science</h4></a>
+            <p>Coursera</p>
+            <p class="text-muted">SQL with Python for data science applications</p>
+          </div>
+          <div class="cert-card">
+            <h4><a href="https://www.coursera.org/account/accomplishments/verify/V2PLCS4UWVWK" target="_self"> 🤖 Introduction to AI</h4></a>
+            <p>IBM</p>
+            <p class="text-muted">Artificial Intelligence fundamentals</p>
+          </div>
+          <div class="cert-card">
+            <h4>🏆 2nd Runner Up</h4>
+            <p>Science Exhibition</p>
+            <p class="text-muted">College Level Competition</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Get In Touch</h1>
+          <p>Let's connect and discuss opportunities</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h4>Email</h4>
+            <a href="mailto:shhruu89@gmail.com">shhruu89@gmail.com</a>
+          </div>
+          <!-- <div class="contact-item"> -->
+            <!-- <i class="fas fa-phone"></i> -->
+            <!-- <h4>Phone</h4> -->
+            <!-- <a href="tel:+917219609470">+91 7219609470</a> -->
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <h4>GitHub</h4>
+            <a href="https://github.com/shhruthii" target="_self">GitHub Profile</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <h4>LinkedIn</h4>
+            <a href="https://linkedin.com/in/shruti-788kl" target="_self">LinkedIn Profile</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Location</h4>
+            <p>Maharashtra, India</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-download"></i>
+            <h4>Resume</h4>
+            <a href="https://1drv.ms/b/c/daab8768d5e50d98/EaCc5JzwDXFDtRe8Y2TlUJkBlKD_Am5JJitniILi83PJTw" target="_self">Download CV</a>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <h3>Ready to work together?</h3>
+          <p class="lead">I'm always interested in discussing new opportunities and data challenges.</p>
+          <a href="mailto:shhruu89@gmail.com" class="btn btn-primary btn-lg">Send Message</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="social-links">
+          <a href="https://github.com/shhruthii" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/shruti-788kl" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:shhruu89@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; <span id="year"></span> ShrutiM. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Typing animation
+      const typingTexts = [
+        'Analyst',
+        'Problem Solver',
+        'Visualization Expert',
+        'Python Developer'
+      ];
+      
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingElement = document.getElementById('typing-animation');
+      
+      function typeText() {
+        const currentText = typingTexts[textIndex];
+        
+        if (isDeleting) {
+          typingElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typingElement.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+        }
+        
+        if (!isDeleting && charIndex === currentText.length) {
+          setTimeout(() => isDeleting = true, 1500);
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % typingTexts.length;
+        }
+        
+        const typingSpeed = isDeleting ? 50 : 100;
+        setTimeout(typeText, typingSpeed);
+      }
+      
+      // Start typing animation
+      typeText();
+
+      // Smooth scrolling
+      $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top - 70
+        }, 500, 'linear');
+      });
+
+      // Navbar background change on scroll
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+          $('.navbar').addClass('scrolled');
+        } else {
+          $('.navbar').removeClass('scrolled');
+        }
+      });
+    </script>
+  </body>
+</html>
