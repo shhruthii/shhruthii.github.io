@@ -577,56 +577,86 @@ background-repeat: no-repeat;
     </section>
 
     <!-- Work Experience Section -->
-    <!-- Work Experience Section -->
+   <!-- Work Experience Section -->
 <section id="experience" class="section about-section">
-    <div class="container">
-        <div class="section-title">
-            <h1>Work Experience</h1>
-            <p>Professional experience and achievements</p>
-        </div>
-        
-        <div class="experience-grid">
-            <!-- Deloitte Experience -->
-            <div class="experience-card">
-                <h4><a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_gyNshKsrkbPkt49yp_1758047786611_completion_certificate.pdf" target="_blank"> 📊 DELOITTE DATA ANALYTICS - Virtual Internship</a></h4>
-                
-                <ul class="experience-details">
-                    <li><span>Role:</span> <span>Data Analytics Intern</span></li>
-                    <li><span>Duration:</span> <span>Virtual Internship Program</span></li>
-                    <li><span>Company:</span> <span>Deloitte</span></li>
-                    <li><span>Skills Gained:</span> <span>Tableau, Excel Data Analysis, Forensic Technology</span></li>
-                </ul>
-                
-                <p class="responsibilities-title">Key Responsibilities:</p>
-                <ul class="responsibilities-list">
-                    <li>Completed a comprehensive Deloitte job simulation involving data analysis and forensic technology</li>
-                    <li>Created interactive data dashboard using Tableau for business intelligence</li>
-                    <li>Used Excel to classify data and draw meaningful business conclusions</li>
-                    <li>Applied forensic technology techniques to analyze complex datasets</li>
-                </ul>
-            </div>
-            
-          <!-- Tata Experience -->
-            <div class="experience-card">
-                <h4><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/MyXvBcppsW2FkNYCX_Tata%20Group_gyNshKsrkbPkt49yp_1718955217906_completion_certificate.pdf" target="_blank"> 🏢 TATA DATA VISUALIZATION - Virtual Internship</a></h4>
-                
-                <ul class="experience-details">
-                    <li><span>Role:</span> <span>Data Visualization Intern</span></li>
-                    <li><span>Duration:</span> <span>Virtual Internship Program</span></li>
-                    <li><span>Achievements:</span> <span>Simulated data visualization projects for TCS</span></li>
-                    <li><span>Skills Gained:</span> <span>Client-focused reporting, decision-making visualizations</span></li>
-                </ul>
-                
-                <p class="responsibilities-title">Key Responsibilities:</p>
-                <ul class="responsibilities-list">
-                    <li>Simulated data visualization projects for Tata Consultancy Services</li>
-                    <li>Prepared insightful visuals to support decision-making for senior leadership</li>
-                    <li>Improved presentation skills through client-focused reporting</li>
-                </ul>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-title">
+      <h1>Work Experience</h1>
+      <p>Professional experience and achievements</p>
     </div>
+
+    <!-- Experience Grid (Side-by-Side like Certifications) -->
+    <div class="experience-grid">
+      
+      <!-- Deloitte Experience -->
+      <div class="experience-card">
+        <h4><a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_gyNshKsrkbPkt49yp_1758047786611_completion_certificate.pdf" target="_blank">📊 DELOITTE DATA ANALYTICS - Virtual Internship</a></h4>
+        <p><strong>Role:</strong> Data Analytics Intern</p>
+        <p><strong>Duration:</strong> Virtual Internship Program</p>
+        <p><strong>Company:</strong> Deloitte</p>
+        <p><strong>Skills Gained:</strong> Tableau, Excel Data Analysis, Forensic Technology</p>
+        <p class="responsibilities-title"><strong>Key Responsibilities:</strong></p>
+        <ul class="responsibilities-list">
+          <li>Completed a comprehensive Deloitte job simulation involving data analysis and forensic technology</li>
+          <li>Created interactive data dashboard using Tableau for business intelligence</li>
+          <li>Used Excel to classify data and draw meaningful business conclusions</li>
+          <li>Applied forensic technology techniques to analyze complex datasets</li>
+        </ul>
+      </div>
+
+      <!-- Tata Experience -->
+      <div class="experience-card">
+        <h4><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/MyXvBcppsW2FkNYCX_Tata%20Group_gyNshKsrkbPkt49yp_1718955217906_completion_certificate.pdf" target="_blank">🏢 TATA DATA VISUALIZATION - Virtual Internship</a></h4>
+        <p><strong>Role:</strong> Data Visualization Intern</p>
+        <p><strong>Duration:</strong> Virtual Internship Program</p>
+        <p><strong>Achievements:</strong> Simulated data visualization projects for TCS</p>
+        <p><strong>Skills Gained:</strong> Client-focused reporting, decision-making visualizations</p>
+        <p class="responsibilities-title"><strong>Key Responsibilities:</strong></p>
+        <ul class="responsibilities-list">
+          <li>Simulated data visualization projects for Tata Consultancy Services</li>
+          <li>Prepared insightful visuals to support decision-making for senior leadership</li>
+          <li>Improved presentation skills through client-focused reporting</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+<!-- Add CSS (same style as certs but landscape-friendly) -->
+<style>
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.experience-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card h4 {
+  margin-bottom: 10px;
+}
+
+.experience-card p, .experience-card ul {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.experience-card ul {
+  padding-left: 18px;
+}
+</style>
 
     
     <!-- Certifications Section -->
@@ -792,6 +822,7 @@ background-repeat: no-repeat;
   </body>
 
 </html>
+
 
 
 
